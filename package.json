@@ -1,0 +1,25 @@
+{
+  "name": "rotlanuagesupport",
+  "displayName": ".Rot Lanuage",
+  "description": "Adds colors to the ROT++ language.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.97.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "rot",
+      "aliases": ["Rot++", "rot"],
+      "extensions": [".rot"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "rot",
+      "scopeName": "source.rot",
+      "path": "./syntaxes/rot.tmLanguage.json"
+    }]
+  }
+}

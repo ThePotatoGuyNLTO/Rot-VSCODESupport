@@ -1,0 +1,50 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Rot++",
+	"patterns": [
+		{
+			"include": "#reserved-words"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#ctrl-statements"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"numbers": {
+			"patterns": [{
+				"name": "keyword.other.unit.suffix.integer.rot",
+				"match": "([0-9])"
+			}]
+		},
+		"ctrl-statements": {
+			"patterns": [{
+				"name": "keyword.control.rot",
+				"match": "\\b(if|while|for|return|skibidi|sigma|input|fade|low)\\b"
+			}]
+		},
+		"reserved-words": {
+			"patterns": [{
+				"name": "entity.name.function.member.rot",
+				"match": "\\b(taper|fanum|bye|add|nerd)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.rot",
+			"begin": "'",
+			"end": "'",
+			"patterns": [
+				{
+					"name": "constant.character.escape.rot",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.rot"
+}
